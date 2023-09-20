@@ -3,7 +3,7 @@ import { useState } from "react";
 
 
 
-export function NewsLetterSignup() {
+export default function NewsLetterSignup() {
 
     const [message, setMessage] = useState("");
     const [formData, setFormData] = useState({

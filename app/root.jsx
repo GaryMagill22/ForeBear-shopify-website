@@ -17,8 +17,8 @@ import resetStyles from './styles/reset.css';
 import appStyles from './styles/app.css';
 import { Layout } from '~/components/Layout';
 import tailwindCss from './styles/tailwind.css';
-import { NewsLetterSignup } from './components/NewsLetterSignup';
-import { ForeBearText } from './components/ForeBearWhiteText';
+import ForeBearText from './components/ForeBearWhiteText';
+import LandingPage from './Pages/LandingPage';
 
 // This is important to avoid re-fetching root queries on sub-navigations
 export const shouldRevalidate = ({ formMethod, currentUrl, nextUrl }) => {
@@ -110,7 +110,7 @@ export default function App() {
         <Layout {...data}>
           <ForeBearText />
           <Outlet />
-          <NewsLetterSignup />
+          <LandingPage />
         </Layout>
         <ScrollRestoration nonce={nonce} />
         <Scripts nonce={nonce} />
