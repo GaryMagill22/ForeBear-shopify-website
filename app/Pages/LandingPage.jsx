@@ -1,4 +1,4 @@
-
+import NewsLetterSignup from "~/components/NewsLetterSignup"
 
 
 export default function LandingPage() {
@@ -7,7 +7,7 @@ export default function LandingPage() {
 
         <div className="main-container h-screen" >
 
-            <main className="relative isolate -z-10 h-screen">
+            <main className="relative isolate -z-10 h-screen mb-20">
 
                 <img
                     src='ColorBlock_Polo.png'
@@ -108,9 +108,9 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </div>
-
+                <NewsLetterSignup />
             </main>
-            <NewsLetterSignup />
+
         </div>
     )
 }

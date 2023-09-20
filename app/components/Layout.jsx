@@ -8,6 +8,7 @@ import {
   PredictiveSearchForm,
   PredictiveSearchResults,
 } from '~/components/Search';
+import LandingPage from '~/Pages/LandingPage';
 
 
 export function Layout({ cart, children = null, footer, header, isLoggedIn }) {
@@ -18,12 +19,16 @@ export function Layout({ cart, children = null, footer, header, isLoggedIn }) {
       <MobileMenuAside menu={header.menu} />
       <Header header={header} cart={cart} isLoggedIn={isLoggedIn} />
       {/* Children is where the content lives in the browswer window  */}
-      <main>{children}</main>
+      <main>
+        <LandingPage />
+
+      </main>
       <Suspense>
         <Await resolve={footer}>
           {(footer) => <Footer menu={footer.menu} />}
         </Await>
       </Suspense>
+
     </>
   );
 }
