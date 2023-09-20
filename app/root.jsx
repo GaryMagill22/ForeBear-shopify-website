@@ -109,9 +109,7 @@ export default function App() {
       <body className="bg-black"
         aria-hidden="true" >
         <Layout {...data}>
-          {/* <ForeBearText /> */}
           <Outlet />
-          {/* <LandingPage /> */}
         </Layout>
         <ScrollRestoration nonce={nonce} />
         <Scripts nonce={nonce} />

@@ -11,7 +11,7 @@ export default function LandingPage() {
 
                 <img
                     src='ColorBlock_Polo.png'
-                    className="absolute inset-0 -z-10 w-full h-full object-cover stroke-gray-200 [mask-image:radial-gradient(50rem_50rem_at_center,white,transparent)]"
+                    className="absolute inset-0 -z-10 w-full h-full object-cover stroke-gray-200 [mask-image:radial-gradient(50rem_50rem_at_center,white,transparent)] mainPageImage"
                     aria-hidden="true"
                 />
 
