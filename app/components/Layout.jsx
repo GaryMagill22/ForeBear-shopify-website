@@ -1,21 +1,23 @@
-import {Await} from '@remix-run/react';
-import {Suspense} from 'react';
-import {Aside} from '~/components/Aside';
-import {Footer} from '~/components/Footer';
-import {Header, HeaderMenu} from '~/components/Header';
-import {CartMain} from '~/components/Cart';
+import { Await } from '@remix-run/react';
+import { Suspense } from 'react';
+import { Aside } from '~/components/Aside';
+import { Footer } from '~/components/Footer';
+import { Header, HeaderMenu } from '~/components/Header';
+import { CartMain } from '~/components/Cart';
 import {
   PredictiveSearchForm,
   PredictiveSearchResults,
 } from '~/components/Search';
 
-export function Layout({cart, children = null, footer, header, isLoggedIn}) {
+
+export function Layout({ cart, children = null, footer, header, isLoggedIn }) {
   return (
     <>
       <CartAside cart={cart} />
-      <SearchAside />
+      {/* <SearchAside /> */}
       <MobileMenuAside menu={header.menu} />
       <Header header={header} cart={cart} isLoggedIn={isLoggedIn} />
+      {/* Children is where the content lives in the browswer window  */}
       <main>{children}</main>
       <Suspense>
         <Await resolve={footer}>
@@ -26,7 +28,7 @@ export function Layout({cart, children = null, footer, header, isLoggedIn}) {
   );
 }
 
-function CartAside({cart}) {
+function CartAside({ cart }) {
   return (
     <Aside id="cart-aside" heading="CART">
       <Suspense fallback={<p>Loading cart ...</p>}>
@@ -46,7 +48,7 @@ function SearchAside() {
       <div className="predictive-search">
         <br />
         <PredictiveSearchForm>
-          {({fetchResults, inputRef}) => (
+          {({ fetchResults, inputRef }) => (
             <div>
               <input
                 name="q"
@@ -67,7 +69,7 @@ function SearchAside() {
   );
 }
 
-function MobileMenuAside({menu}) {
+function MobileMenuAside({ menu }) {
   return (
     <Aside id="mobile-menu-aside" heading="MENU">
       <HeaderMenu menu={menu} viewport="mobile" />
