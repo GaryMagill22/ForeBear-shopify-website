@@ -480,3 +480,31 @@ aside li {
 .account-logout {
   display: inline-block;
 }
+
+/*
+* --------------------------------------------------
+* LANDING PAGE
+* --------------------------------------------------
+*/
+
+#forebearWhiteText {
+
+  margin: 20px;
+  width: 95%;
+  position: absolute;
+  bottom: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bearImg {
+  width: 300px;
+  margin-left: 150px;
+}
+
+.summary-Container {
+  position: relative;
+  top: 75px;
+  right: 30px;
+
+}
