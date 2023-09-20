@@ -17,13 +17,13 @@ export function Layout({ cart, children = null, footer, header, isLoggedIn }) {
       <CartAside cart={cart} />
       {/* <SearchAside /> */}
       <MobileMenuAside menu={header.menu} />
-      <Header header={header} cart={cart} isLoggedIn={isLoggedIn} />
+      {/* <Header header={header} cart={cart} isLoggedIn={isLoggedIn} /> */}
       {/* Children is where the content lives in the browswer window  */}
       <main>
         <LandingPage />
 
       </main>
-      {/* <Suspense>
+      {/* <Suspense></Suspense>
         <Await resolve={footer}>
           {(footer) => <Footer menu={footer.menu} />}
         </Await>

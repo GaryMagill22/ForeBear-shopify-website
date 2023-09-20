@@ -18,7 +18,7 @@ img {
 * --------------------------------------------------
 */
 aside {
-  background: var(--color-light);
+  background: var(--color-dark);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
   height: 100vh;
   max-width: var(--aside-width);
@@ -132,13 +132,13 @@ aside li {
 */
 .header {
   align-items: center;
-  background: #fff;
+  background: grey;
   display: flex;
   height: var(--header-height);
   padding: 0 1rem;
-  position: sticky;
+  /* position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 1; */
 }
 
 .header-menu-mobile-toggle {
