@@ -25,6 +25,8 @@
   },
   "include": [
     "./**/*.js",
-    "./**/*.jsx"
+    "./**/*.jsx",
+    "server.js",
+    "remix.config.js"
   ]
 }
